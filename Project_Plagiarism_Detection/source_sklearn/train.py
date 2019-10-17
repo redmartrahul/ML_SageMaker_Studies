@@ -5,6 +5,7 @@ import os
 import pandas as pd
 
 from sklearn.externals import joblib
+from sklearn.linear_model import LogisticRegression
 
 ## TODO: Import any additional libraries you need to define a model
 
@@ -55,13 +56,14 @@ if __name__ == '__main__':
     ## --- Your code here --- ##
     
 
-    ## TODO: Define a model 
-    model = None
+    model = LogisticRegression(class_weight='balanced')
+    #given that we dont have sample data in same prportion
     
     
     ## TODO: Train the model
+    model.fit(train_x, train_y)
     
-    
+
     
     ## --- End of your code  --- ##
     

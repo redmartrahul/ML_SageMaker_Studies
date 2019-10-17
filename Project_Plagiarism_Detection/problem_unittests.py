@@ -114,6 +114,7 @@ def test_lcs(df, lcs_word):
         orig_rows = df[(df['Class'] == -1)]
         orig_row = orig_rows[(orig_rows['Task'] == task)]
         source_text = orig_row['Text'].values[0]
+   
         # calc lcs
         val = lcs_word(answer_text, source_text)
         results.append(val)
